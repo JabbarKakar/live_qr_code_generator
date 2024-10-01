@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class QrCodeScreen extends StatefulWidget {
-  const QrCodeScreen({Key? key}) : super(key: key);
+  const QrCodeScreen({super.key});
 
   @override
   State<QrCodeScreen> createState() => _QrCodeScreenState();
@@ -44,7 +44,7 @@ class _QrCodeScreenState extends State<QrCodeScreen> {
                   child: data.isNotEmpty
                       ? QrImageView(
                       data: data, version: QrVersions.auto, size: 300)
-                      : Center(
+                      : const Center(
                       child: Text("Your QR code here....",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
